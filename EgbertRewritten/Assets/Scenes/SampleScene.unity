@@ -188,12 +188,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6f4487787dbef43a1da5ebacf0e5b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1309702424}
+  smoothing: 0.1
+  maxPos: {x: 3, y: 3}
+  minPos: {x: -3, y: -3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -221,7 +224,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.0070871
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -261,8 +264,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1309702424}
   - component: {fileID: 1309702423}
-  - component: {fileID: 1309702425}
   - component: {fileID: 1309702426}
+  - component: {fileID: 1309702425}
   m_Layer: 0
   m_Name: Idle_0
   m_TagString: Untagged
@@ -329,7 +332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309702422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0024, y: 0.0063, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 496289534}
@@ -345,7 +348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1309702422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 268f21624ba14494ebd01879f9277a86, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ed6ee92d309aa4e9d7b2adaf45c5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1309702426}
@@ -532,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554016953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.179, y: -0.096, z: 0.2883104}
+  m_LocalPosition: {x: 0.1315, y: -0.0979, z: 0.2883104}
   m_LocalScale: {x: 0.007, y: 0.007, z: 1}
   m_Children:
   - {fileID: 1340487323}
