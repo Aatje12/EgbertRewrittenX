@@ -631,7 +631,6 @@ GameObject:
   - component: {fileID: 1763356002}
   - component: {fileID: 1763356001}
   - component: {fileID: 1763356000}
-  - component: {fileID: 1763356004}
   - component: {fileID: 1763356003}
   m_Layer: 8
   m_Name: IdleEnemy.png_0 (1)
@@ -718,34 +717,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763355999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.813, y: -0.076, z: 10}
+  m_LocalPosition: {x: 2.208, y: 0.546, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 519420032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1763356003
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763355999}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &1763356004
+--- !u!114 &1763356003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -754,14 +732,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1763355999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f016ccb98dbbd144b84df96e1247b87d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5096c4f038107954ba9269ff45950247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  checkRadius: 5
-  attackRadius: 1
-  shouldRotate: 1
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 256
-  dir: {x: 0, y: 0, z: 0}
+  speed: 1
+  range: 1
