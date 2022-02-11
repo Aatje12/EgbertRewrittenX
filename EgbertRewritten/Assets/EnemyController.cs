@@ -6,10 +6,15 @@ public class EnemyController : MonoBehaviour
 {
     private Animator myAnim;
     private Transform target;
+    public Transform homePos;
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float range;
+    private float maxRange;
+    [SerializeField]
+    private float minRange;
+
+
     void Start()
     {
         myAnim = GetComponent<Animator>();
@@ -19,7 +24,15 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FollowPlayer();
+        if (Vector3.Distance(target.position, transform.position) <= maxRange && Vector3.Distance(target.position, transform.position) >= minRange)
+        {
+            FollowPlayer();
+        }
+        else if (Vector3.Distance(target.position, transform.position) >= maxRange)
+        {
+            GoHome();
+        }
+
     }
 
     public void FollowPlayer()
@@ -30,4 +43,10 @@ public class EnemyController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
     }
 
+    public void GoHome()
+    {
+        myAnim.SetFloat("moveX", (homePos.position.x - transform.position.x));
+        myAnim.SetFloat("moveY", (homePos.position.y - transform.position.y));
+        transform.position = Vector3.MoveTowards(transform.position, homePos.position, speed * Time.deltaTime);
+    }
 }
