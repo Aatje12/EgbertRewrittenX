@@ -10,11 +10,13 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    public GameObject projectile;
     public Transform player;
+    public GameObject projectile;
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
