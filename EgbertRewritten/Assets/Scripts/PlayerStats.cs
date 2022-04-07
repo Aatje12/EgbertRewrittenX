@@ -61,7 +61,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (health <= 0)
         {
-            Destroy(player);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
